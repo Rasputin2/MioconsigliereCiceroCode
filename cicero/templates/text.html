@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block instructions %}
+    <h3>Helpful Tip:</h3>
+    <p>If you see subsections you do not care about, consider performing a new search with more specificity (i.e., 368(a)(2)(D) instead of 368).</p>
+{% endblock %}
+{% block content %}
+    <form method = 'POST' action =""> 
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>Click 'Proceed' For Analysis:</legend>
+            <p>On your click, Cicero will analyze changes from today to 1987.</p>
+            {{ form.proceed }}
+        </fieldset>
+    </form>
+{% endblock %}
+{% block section %}
+    <h3>This is the text of your section: </h3>
+    <p> {{ sectionText }} </p>
+{% endblock %}

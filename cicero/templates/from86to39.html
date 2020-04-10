@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block instructions %}
+{% endblock %}
+{% block content %}
+    <form method = 'POST' action =""> 
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>Click 'Proceed' for More Analysis:</legend>
+            <p>On your click, Cicero will provide a mapping from 1939 to 1866, if available.</p>
+            {{ form.proceed }}
+        </fieldset>
+    </form>
+{% endblock %}
+{% block section %}
+    <h3>Here is your analysis for the period 1986-1939: </h3>
+    <p> {{ analysis }} </p>
+{% endblock %}

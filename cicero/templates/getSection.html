@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block introduction %}
+    <div style = "padding-top: 0, padding-left: 30 px">
+        <h2> Welcome to Cicero! </h2>
+        <h3> What is Cicero?</h3>
+            <p>You can use Cicero to speed your research of federal tax provisions. Various income tax provisions can be traced all the way back to the Civil War income tax acts starting with the Revenue Act of 1861. Cicero allows you to quickly trace the origin of a current Code provision back to the Internal Revenue Code of 1939 and, from there, to the Revenue Acts of 1861 through 1938.  If you would like a very brief overview of the history of the U.S. income tax and some citations to additional reading, just click here <a href=/TaxHistoryPage.html><strong>history</strong></a>.</p>
+    </div>
+{% endblock %}
+{% block instructions %}
+    <h3> How Do I Use Cicero? </h3>
+        <p> Just type a number into the HTML window below, be as specific as possible - e.g., 351(a)(1)(B). Cicero will first search for section 351(a)(1)(B), then section 351(a)(1), then section 351, to see if there is any available mapping.</p>
+{%endblock%}
+
+{% block section %}
+
+    <form method = 'POST' action =""> 
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>Enter Your Section Here:</legend>
+            {{ form.codesection }}
+            {{ form.submit }} 
+        </fieldset>
+    </form>
+    
+{%endblock%}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block content %}
+    <form method = 'POST' action =""> 
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>Proceed to Analyze Period 1986 to 1939?</legend>
+            {{ form.proceed }} 
+        </fieldset>
+    </form>
+{%endblock%}
+
+{%block section%}
+    <h3>This is your analysis from today to 1987:</h3>
+    <p> {{ analysis }} </p>
+{%endblock%}

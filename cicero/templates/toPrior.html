@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block instructions %}
+    <h3>Please note that this is the last time period for which data is available.</h3>
+{% endblock %}
+{% block content %}
+    <form method = 'POST' action =""> 
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>Click 'New Search' to do Another Search:</legend>
+            <p>Alternatively, you can use the navigation bar above to be redirected to another area of the site.</p>
+            {{ form.newsearch }}
+        </fieldset>
+    </form>
+{% endblock %}
+{% block section %}
+    <h3>Here is your analysis for periods prior to 1939: </h3>
+    <p> {{ analysis }} </p>
+{% endblock %}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if title %}
+        <title> {{title}} </title>
+    {% else %}
+        <title>TextOfCode</title>
+    {% endif %}
+    
+    <link rel = 'stylesheet' type = 'text/css' href = "{{url_for('static',filename = 'main.css')}}">
+    
+</head>
+
+<body style = "padding-bottom: 2px">
+    <div class="logo">
+        <p style="margin:0px auto 0px;padding-top:2px;padding-bottom: 2px;"><strong>Mio Consigliere</strong></p>
+    </div>
+    <nav>
+        <a href="/index.html">Home</a>
+        <a href="/login.php">Log In</a>
+        <a href="/Register.php">Create Account</a>
+        <a href="/Training_Home.php">Training</a>
+        <a href="/Research.html">Research</a>
+    </nav>
+    {%with messages = get_flashed_messages()%}
+        {%if messages%}
+            {%for message in messages%}
+                {{ message }}
+            {%endfor%}
+        {%endif%}
+    {%endwith%}
+    {%block introduction%}
+    {%endblock%}
+    {%block instructions%}
+    {%endblock%}
+    {%block content%}
+    {%endblock%}
+    {%block section%}
+    {%endblock%}
+    
+</body>
+</html>
